@@ -18,7 +18,7 @@ namespace ReflectionTest.Extenstions
             }
 
             var type = o.GetType();
-            var properties = type.GetProperties(BindingFlags.Instance | BindingFlags.Public);
+            var properties = type.GetProperties();
 
             Console.WriteLine($"{indentation}Object of Class \"{type.FullName}\"");
             Console.WriteLine($"{indentation}--------------------------------");
