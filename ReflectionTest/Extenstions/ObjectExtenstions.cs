@@ -25,9 +25,13 @@ namespace ReflectionTest.Extenstions
 
             var propIndent = indentation + "    ";
 
+            if(properties.Any(x => x.GetMethod?.IsPrivate == true || x.SetMethod?.IsPrivate == true))
+            {
+                return;
+            }
+
             foreach (var property in properties)
             {
-                // skip indexers
                 if (property.GetIndexParameters().Length > 0)
                     continue;
 
