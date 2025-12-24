@@ -49,7 +49,6 @@ namespace ReflectionTest.Extenstions
                     }
                     else
                     {
-                        Console.WriteLine($"{propIndent}{property.Name}:");
                         PrintObjectStructure(value, propIndent + "    ");
                     }
                 }
